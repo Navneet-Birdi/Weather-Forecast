@@ -16,12 +16,13 @@
     <div class="collapse navbar-collapse" id="navbarColor02">
        <form id="search-form" class="form-inline my-2 my-lg-0"> 
         
-      <input class="input-search mr-sm-2" type="text" placeholder="Search for a city"> <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button> </form>
+        <input class="input-search mr-sm-2" id="input-search" type="text" placeholder="Search for a city">
+         <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button> </form>
     </div>
 </nav>
 <section class="row">
     <div class="card">
-        <span class="icon"><img class="img-fluid" src="https://img.icons8.com/emoji/96/000000/sun-emoji.png"/></span>
+        
         <div class="title" id="current-day-city"><p>Atlanta 2022-06-01</p></div>
        
             <div class="card-text">
@@ -33,11 +34,13 @@
             
     </div>
     
-</section>
+</section><br/>
+ <h2>Five day Forecast</h2>
 <section class="row">
+ 
     <div class="cards col-2">
         <div class="card-body">
-            <h6 class="card-title">2022-06-02 icon</h6>
+            <h6 class="card-title">2022-06-02</h6>
             <div class="card-text">
               <p>Temp: <span id="current-day-temp">12C</span> </p>
               <p>Wind: <span id="current-day-wind">12</span> </p>
