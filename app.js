@@ -61,7 +61,8 @@ searchForm.addEventListener('submit', function(event){
       const datetime = moment(weatherData.current.dt, 'X').format("YYYY-MM-DD");
       console.log(datetime);
 
-      currentDayCity.innerHTML = `${userInput} ${datetime} icon`
+      //currentDayCity.innerHTML = `${userInput} ${datetime} icon`
+      currentDayCity.innerHTML = `${userInput} ${datetime} <img src=https://openweathermap.org/img/w/${weatherData.current.weather[0].icon}.png >`
       currentDayHumidity.textContent = weatherData.current.humidity;
       currentDayTemp.textContent = weatherData.current.temp + 'K';
       currentDayWind.textContent = weatherData.current.wind_speed + " kmh";
