@@ -62,38 +62,36 @@ searchForm.addEventListener('submit', function(event){
       console.log(datetime);
 
       //currentDayCity.innerHTML = `${userInput} ${datetime} icon`
-      currentDayCity.innerHTML = `${userInput} ${datetime} <img src=https://openweathermap.org/img/w/${weatherData.current.weather[0].icon}.png width=50 >`
-      currentDayHumidity.textContent = weatherData.current.humidity;
-      currentDayTemp.textContent = weatherData.current.temp + 'K';
-      currentDayWind.textContent = weatherData.current.wind_speed + " kmh";
-      // store the city name into localstorage
-      // render the history in the search list
-    })
-  
-});
-// five day forecast
-
-
-
-const cardTitle = document.getElementById('date');
-const currentdayTemp = document.getElementById(current-day-Temp);
-const currentdayWind = document.getElementById(current-day-Wind);
-const currentdayHumid = document.getElementById(current-day-Humidity);
-
-
- getWeatherData(userInput)
-    .then(function(weatherData){
-
-      console.log(weatherData); // current 
-      const datetime = moment(weatherData.current.dt, 'X').format("YYYY-MM-DD");
-      console.log(datetime);
-
-      //currentDayCity.innerHTML = `${userInput} ${datetime} icon`
-      cardTitle.innerHTML = `${userInput} ${datetime} <img src=https://openweathermap.org/img/w/${weatherData.current.weather[0].icon}.png >`
+      currentDayCity.innerHTML = `${userInput} ${datetime} <img src=https://openweathermap.org/img/w/${weatherData.current.weather[0].icon}.png width=50>`
       currentDayHumidity.textContent = weatherData.current.humidity;
       currentDayTemp.textContent = weatherData.current.temp + 'K';
       currentDayWind.textContent = weatherData.current.wind_speed + " kmh";
       
+      //card 1
+      document.querySelector("#dayOneDate").innerHTML =  moment(weatherData.daily[0].dt , 'X').format("YYYY-MM-DD");
+      document.querySelector("#dayOnetemp").innerHTML = weatherData.daily[0].temp.max
+      document.querySelector("#dayOneWind").innerHTML = weatherData.daily[0].wind_speed
+      document.querySelector("#dayOneHumi").innerHTML = weatherData.daily[0].humidity
+
+      document.querySelector("#dayOneDate").innerHTML =  moment(weatherData.daily[1].dt , 'X').format("YYYY-MM-DD");
+      document.querySelector("#dayOnetemp").innerHTML = weatherData.daily[1].temp.max
+      document.querySelector("#dayOneWind").innerHTML = weatherData.daily[1].wind_speed
+      document.querySelector("#dayOneHumi").innerHTML = weatherData.daily[1].humidity
+
+      document.querySelector("#dayOneDate").innerHTML =  moment(weatherData.daily[2].dt , 'X').format("YYYY-MM-DD");
+      document.querySelector("#dayOnetemp").innerHTML = weatherData.daily[2].temp.max
+      document.querySelector("#dayOneWind").innerHTML = weatherData.daily[2].wind_speed
+      document.querySelector("#dayOneHumi").innerHTML = weatherData.daily[2].humidity
+
+      document.querySelector("#dayOneDate").innerHTML =  moment(weatherData.daily[3].dt , 'X').format("YYYY-MM-DD");
+      document.querySelector("#dayOnetemp").innerHTML = weatherData.daily[3].temp.max
+      document.querySelector("#dayOneWind").innerHTML = weatherData.daily[3].wind_speed
+      document.querySelector("#dayOneHumi").innerHTML = weatherData.daily[3].humidity
+
+      document.querySelector("#dayOneDate").innerHTML =  moment(weatherData.daily[0].dt , 'X').format("YYYY-MM-DD");
+      document.querySelector("#dayOnetemp").innerHTML = weatherData.daily[4].temp.max
+      document.querySelector("#dayOneWind").innerHTML = weatherData.daily[4].wind_speed
+      document.querySelector("#dayOneHumi").innerHTML = weatherData.daily[4].humidity
     })
   
-;
+});
