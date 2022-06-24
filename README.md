@@ -22,3 +22,10 @@ THEN I am presented with a 5-day forecast that displays the date, an icon repres
 WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 ```
+
+
+Weather Dashboard app
+So as the name implies this app is to check weather conditions, where you can simply type your cityname then search. after that it will display wetaher for that searched city and also five day forecast as well.
+
+
+To use this app please visit: https://navneet-birdi.github.io/Weather-Forecast/
