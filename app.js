@@ -6,18 +6,13 @@ const currentDayWind = document.getElementById('current-day-wind');
 const currentDayHumidity = document.getElementById('current-day-humidity');
 
 const apiKey = 'd91f911bcf2c0f925fb6535547a5ddc9';
-
-
-
 function getOneCallApi(lon, lat){
 
   return fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}`)
     .then(function(res){
       return res.json()
     })
-
 }
-
 
 function getWeatherData(city) {
   
@@ -31,12 +26,7 @@ function getWeatherData(city) {
 
       return getOneCallApi(currentWeather.coord.lon, currentWeather.coord.lat, currentWeather.dt)
     })
-    
-
-
 }
-
-
 
 // when I click on the search button
 searchForm.addEventListener('submit', function(event){
@@ -50,13 +40,10 @@ searchForm.addEventListener('submit', function(event){
   // fetch weather data based on city name
   getWeatherData(userInput)
     .then(function(weatherData){
-
-      console.log(weatherData);
+    console.log(weatherData);
 
       // got the data,
       //  now populate the data into the dom
-      
-
       // current 
       const datetime = moment(weatherData.current.dt, 'X').format("YYYY-MM-DD");
       console.log(datetime);
@@ -67,8 +54,8 @@ searchForm.addEventListener('submit', function(event){
       currentDayTemp.textContent = weatherData.current.temp + 'K';
       currentDayWind.textContent = weatherData.current.wind_speed + " kmh";
       
+      //displaying weather conditions on cards
       //card 1
-      
       document.querySelector("#dayOneDate").innerHTML =  moment(weatherData.daily[0].dt , 'X').format("YYYY-MM-DD");
       document.querySelector("#dayOneTemp").innerHTML = weatherData.daily[0].temp.max
       document.querySelector("#dayOneWind").innerHTML = weatherData.daily[0].wind_speed
