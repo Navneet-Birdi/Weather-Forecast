@@ -53,8 +53,8 @@ searchForm.addEventListener('submit', function(event){
 
       console.log(weatherData);
 
-      // once we got the data,
-      // populate the data into the dom
+      // got the data,
+      //  now populate the data into the dom
       
 
       // current 
@@ -68,30 +68,35 @@ searchForm.addEventListener('submit', function(event){
       currentDayWind.textContent = weatherData.current.wind_speed + " kmh";
       
       //card 1
+      
       document.querySelector("#dayOneDate").innerHTML =  moment(weatherData.daily[0].dt , 'X').format("YYYY-MM-DD");
-      document.querySelector("#dayOnetemp").innerHTML = weatherData.daily[0].temp.max
+      document.querySelector("#dayOneTemp").innerHTML = weatherData.daily[0].temp.max
       document.querySelector("#dayOneWind").innerHTML = weatherData.daily[0].wind_speed
-      document.querySelector("#dayOneHumi").innerHTML = weatherData.daily[0].humidity
-
-      document.querySelector("#dayOneDate").innerHTML =  moment(weatherData.daily[1].dt , 'X').format("YYYY-MM-DD");
-      document.querySelector("#dayOnetemp").innerHTML = weatherData.daily[1].temp.max
-      document.querySelector("#dayOneWind").innerHTML = weatherData.daily[1].wind_speed
-      document.querySelector("#dayOneHumi").innerHTML = weatherData.daily[1].humidity
-
-      document.querySelector("#dayOneDate").innerHTML =  moment(weatherData.daily[2].dt , 'X').format("YYYY-MM-DD");
-      document.querySelector("#dayOnetemp").innerHTML = weatherData.daily[2].temp.max
-      document.querySelector("#dayOneWind").innerHTML = weatherData.daily[2].wind_speed
-      document.querySelector("#dayOneHumi").innerHTML = weatherData.daily[2].humidity
-
-      document.querySelector("#dayOneDate").innerHTML =  moment(weatherData.daily[3].dt , 'X').format("YYYY-MM-DD");
-      document.querySelector("#dayOnetemp").innerHTML = weatherData.daily[3].temp.max
-      document.querySelector("#dayOneWind").innerHTML = weatherData.daily[3].wind_speed
-      document.querySelector("#dayOneHumi").innerHTML = weatherData.daily[3].humidity
-
-      document.querySelector("#dayOneDate").innerHTML =  moment(weatherData.daily[0].dt , 'X').format("YYYY-MM-DD");
-      document.querySelector("#dayOnetemp").innerHTML = weatherData.daily[4].temp.max
-      document.querySelector("#dayOneWind").innerHTML = weatherData.daily[4].wind_speed
-      document.querySelector("#dayOneHumi").innerHTML = weatherData.daily[4].humidity
+      document.querySelector("#dayOneHumidity").innerHTML = weatherData.daily[0].humidity
+      
+      //card2
+      document.querySelector("#dayTwoDate").innerHTML =  moment(weatherData.daily[1].dt , 'X').format("YYYY-MM-DD");
+      document.querySelector("#dayTwoTemp").innerHTML = weatherData.daily[1].temp.max
+      document.querySelector("#dayTwoWind").innerHTML = weatherData.daily[1].wind_speed
+      document.querySelector("#dayTwoHumidity").innerHTML = weatherData.daily[1].humidity
+      
+      //card3
+      document.querySelector("#dayThreeDate").innerHTML =  moment(weatherData.daily[2].dt , 'X').format("YYYY-MM-DD");
+      document.querySelector("#dayThreeTemp").innerHTML = weatherData.daily[2].temp.max
+      document.querySelector("#dayThreeWind").innerHTML = weatherData.daily[2].wind_speed
+      document.querySelector("#dayThreeHumidity").innerHTML = weatherData.daily[2].humidity
+      
+      //card4
+      document.querySelector("#dayFourDate").innerHTML =  moment(weatherData.daily[3].dt , 'X').format("YYYY-MM-DD");
+      document.querySelector("#dayFourTemp").innerHTML = weatherData.daily[3].temp.max
+      document.querySelector("#dayFourWind").innerHTML = weatherData.daily[3].wind_speed
+      document.querySelector("#dayFourHumidity").innerHTML = weatherData.daily[3].humidity
+        
+      //card5
+      document.querySelector("#dayFiveDate").innerHTML =  moment(weatherData.daily[4].dt , 'X').format("YYYY-MM-DD");
+      document.querySelector("#dayFiveTemp").innerHTML = weatherData.daily[4].temp.max
+      document.querySelector("#dayFiveWind").innerHTML = weatherData.daily[4].wind_speed
+      document.querySelector("#dayFiveHumidity").innerHTML = weatherData.daily[4].humidity
     })
   
-});
+})
