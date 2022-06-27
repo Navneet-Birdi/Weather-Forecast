@@ -5,7 +5,7 @@ const currentDayTemp = document.getElementById('current-day-temp');
 const currentDayWind = document.getElementById('current-day-wind');
 const currentDayHumidity = document.getElementById('current-day-humidity');
 
-const apiKey = 'd91f911bcf2c0f925fb6535547a5ddc9';
+const apiKey = 'c7bcb681c19bf42892ef06f5e88966f9';
 function getOneCallApi(lon, lat){
 
   return fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}`)
