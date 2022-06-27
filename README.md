@@ -1,3 +1,4 @@
+![w1](https://user-images.githubusercontent.com/103732777/175492793-fe6c875d-6dfa-4387-9613-3b9c3dbbe58d.png)
 # 06 Server-Side APIs: Weather Dashboard
 ## User Story
 
